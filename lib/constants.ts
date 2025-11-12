@@ -64,7 +64,7 @@ export const GAMES = [
     note: '빅매치!',
     logoA: '/images/lakers-logo.png',
     logoB: '/images/mavericks-logo.png',
-    image: '/images/crypto-arena.jpg',
+    image: '/images/crypto-arena-new.jpg',
   },
 ]
 

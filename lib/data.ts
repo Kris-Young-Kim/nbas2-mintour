@@ -114,7 +114,7 @@ export const ITINERARY = [
       '짐 정리 및 최종 준비',
     ],
     mealInfo: '호텔 조식, 중식 $20 지급, 자체 준비 (석식)',
-    image: '/images/crypto-arena.jpg',
+    image: '/images/crypto-arena-new.jpg',
     gameInfo: {
       teams: 'Lakers vs Mavericks',
       venue: 'Crypto Arena',
