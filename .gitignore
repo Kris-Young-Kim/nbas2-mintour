@@ -55,3 +55,6 @@ GIT_SETUP.md
 *.pdf
 docs/*.md
 !docs/README.md
+!docs/DEPLOYMENT.md
+!docs/TODO.md
+
