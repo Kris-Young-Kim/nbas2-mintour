@@ -207,16 +207,16 @@
 
 - [x] 모든 컴포넌트 import
 - [x] 섹션 순서 배치
-  1. [ ] Header
-  2. [ ] Hero
-  3. [ ] NBA Spotlight
-  4. [ ] Itinerary
-  5. [ ] Highlights
-  6. [ ] Pricing
-  7. [ ] FAQ
-  8. [ ] CTA
-  9. [ ] Newsletter
-  10. [ ] Footer
+  1. [x] Header
+  2. [x] Hero
+  3. [x] NBA Spotlight
+  4. [x] Itinerary
+  5. [x] Highlights
+  6. [x] Pricing
+  7. [x] FAQ
+  8. [x] CTA
+  9. [x] Newsletter
+  10. [x] Footer
 - [x] 섹션 ID 설정 (앵커 링크용)
 - [x] 스크롤 애니메이션 (선택)
 
