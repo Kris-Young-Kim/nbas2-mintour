@@ -20,11 +20,16 @@ const config: Config = {
       },
       animation: {
         'slide-down': 'slide-down 0.3s ease-out',
+        'fade-in': 'fade-in 1s ease-in',
       },
       keyframes: {
         'slide-down': {
           'from': { opacity: '0', transform: 'translateY(-10px)' },
           'to': { opacity: '1', transform: 'translateY(0)' },
+        },
+        'fade-in': {
+          'from': { opacity: '0' },
+          'to': { opacity: '1' },
         },
       },
     },
