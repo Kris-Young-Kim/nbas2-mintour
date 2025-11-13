@@ -43,7 +43,7 @@ export function Itinerary() {
           투어 일정
         </h2>
         <p className="text-center text-gray-600 dark:text-gray-400 mb-12 text-lg">
-          5박 7일의 특별한 NBA 직관투어
+          {ITINERARY.length}일의 특별한 NBA 직관투어
         </p>
         <div className="max-w-4xl mx-auto space-y-4">
           {ITINERARY.map((day) => (

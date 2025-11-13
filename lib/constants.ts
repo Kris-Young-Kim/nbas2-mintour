@@ -2,14 +2,14 @@
 export const TOUR_INFO = {
   title: '김맘바와 함께하는 NBA 직관투어 2026',
   shortTitle: 'NBA 직관투어 2026',
-  duration: '5박 7일',
+  duration: '5박 6일',
   startDate: '2026-02-08',
   endDate: '2026-02-13',
   dateDisplay: '2026.02.08 ~ 2026.02.13',
-  price: 6800000,
+  price: 7300000,
   deposit: 2000000,
-  finalPayment: 4800000,
-  description: '샌프란시스코, LA에서 만나는 NBA의 모든 것',
+  finalPayment: 5300000,
+  description: '로스앤젤레스, 샌프란시스코에서 만나는 NBA의 모든 것',
   subtitle: 'NBA 유튜버 김맘바와 함께하는 농구 성지 순례',
 }
 
@@ -17,20 +17,20 @@ export const TOUR_INFO = {
 export const GAMES = [
   {
     id: 1,
-    teamA: 'Golden State Warriors',
-    teamB: 'Memphis Grizzlies',
-    teamAShort: 'Warriors',
-    teamBShort: 'Grizzlies',
-    venue: 'Chase Center',
-    city: 'San Francisco',
-    location: '샌프란시스코',
+    teamA: 'Los Angeles Lakers',
+    teamB: 'Oklahoma City Thunder',
+    teamAShort: 'Lakers',
+    teamBShort: 'Thunder',
+    venue: 'Crypto Arena',
+    city: 'Los Angeles',
+    location: '로스앤젤레스',
     date: '2026-02-09',
-    dateDisplay: '2월 9일(일)',
-    mealAllowance: '$30 (석식)',
+    dateDisplay: '2월 9일(화)',
+    mealAllowance: '자체 준비 (중식, 석식)',
     note: '빅매치!',
-    logoA: '/images/warriors-logo.png',
-    logoB: '/images/grizzlies-logo.png',
-    image: '/images/chase-center.jpg',
+    logoA: '/images/lakers-logo.png',
+    logoB: '/images/thunder-logo.png',
+    image: '/images/crypto-arena.jpg',
   },
   {
     id: 2,
@@ -42,8 +42,8 @@ export const GAMES = [
     city: 'Los Angeles',
     location: '로스앤젤레스',
     date: '2026-02-10',
-    dateDisplay: '2월 10일(월)',
-    mealAllowance: '$20 (중식), 자체 준비 (석식)',
+    dateDisplay: '2월 10일(수)',
+    mealAllowance: '자체 준비 (중식, 석식)',
     note: '빅매치!',
     logoA: '/images/lakers-logo.png',
     logoB: '/images/spurs-logo.png',
@@ -51,20 +51,20 @@ export const GAMES = [
   },
   {
     id: 3,
-    teamA: 'Los Angeles Lakers',
-    teamB: 'Dallas Mavericks',
-    teamAShort: 'Lakers',
-    teamBShort: 'Mavericks',
-    venue: 'Crypto Arena',
-    city: 'Los Angeles',
-    location: '로스앤젤레스',
-    date: '2026-02-12',
-    dateDisplay: '2월 12일(수)',
-    mealAllowance: '$20 (중식), 자체 준비 (석식)',
+    teamA: 'Golden State Warriors',
+    teamB: 'San Antonio Spurs',
+    teamAShort: 'Warriors',
+    teamBShort: 'Spurs',
+    venue: 'Chase Center',
+    city: 'San Francisco',
+    location: '샌프란시스코',
+    date: '2026-02-11',
+    dateDisplay: '2월 11일(목)',
+    mealAllowance: '자체 준비 (중식, 석식)',
     note: '빅매치!',
-    logoA: '/images/lakers-logo.png',
-    logoB: '/images/mavericks-logo.png',
-    image: '/images/crypto-arena-lakers-mavericks.jpg',
+    logoA: '/images/warriors-logo.png',
+    logoB: '/images/spurs-logo.png',
+    image: '/images/chase-center.jpg',
   },
 ]
 
@@ -74,7 +74,7 @@ export const FAQ_DATA = [
     id: 1,
     question: '환율 변동이 있는데, 가격이 올라가지는 않나요?',
     answer:
-      '환율 영향이 있어도 전체 비용에선 1~20만원 정도의 차이이므로 680만원 동결입니다.',
+      '환율 영향이 있어도 전체 비용에선 1~20만원 정도의 차이이므로 730만원 동결입니다.',
   },
   {
     id: 2,
@@ -92,7 +92,7 @@ export const FAQ_DATA = [
     id: 4,
     question: '입금 일정은 어떻게 되나요?',
     answer:
-      '항공권 부킹 마감이 1월 초이므로 1월 중순까지 계약금 200만원을 선입금하고, 투어 확정 후 출발 1~2주 전에 나머지 500만원을 결제합니다.',
+      '항공권 부킹 마감이 1월 초이므로 1월 중순까지 계약금 200만원을 선입금하고, 투어 확정 후 출발 1~2주 전에 나머지 530만원을 결제합니다.',
   },
   {
     id: 5,
@@ -103,24 +103,16 @@ export const FAQ_DATA = [
 
 // 포함사항
 export const INCLUDED_ITEMS = [
-  '왕복항공료 (아시아나항공 OZ212 / OZ201)',
-  '항공세, 인천공항세, 관광진흥개발기금, 전쟁보험료, 유류할증료',
-  '전일정 숙박 (Holiday Inn & Suites Hotel 또는 동급)',
-  '전일정 식사 & 입장료',
-  '물 (1일 1병)',
-  '경기 중식 $20, 석식 $30 지급 (경기가 있는 날)',
-  '₩1억 여행자보험',
-  '가이드 & 식당 팁',
-  'Asiana Airlines 블록 예약 (쾌적한 좌석)',
-  'Intuit Dome 견학',
-  '농구 성지 및 코비 벽화 투어',
+  '전일정 호텔 (Best Western Plus Hotel / Bay Landing Hotel San Francisco 또는 동급)',
+  '차량 및 가이드',
+  '전일정 식사',
+  '기사님 & 가이드 팁',
 ]
 
 // 불포함사항
 export const EXCLUDED_ITEMS = [
-  '호텔 룸메이드팁 등 매너팁 (자율)',
-  'ESTA 비용 ($21 - 개인부담)',
-  'ESTA 비자 대행료 (₩50,000, 투어사 이용 시 선택)',
+  'NBA 입장권 등 각종 입장료',
+  '옵션 관광',
 ]
 
 // 항공 정보
@@ -129,24 +121,25 @@ export const FLIGHT_INFO = {
     airline: 'Asiana Airlines',
     flight: 'OZ212',
     date: '2026-02-08',
-    departure: '인천 20:50',
-    arrival: '샌프란시스코 14:00 (현지시간)',
-    duration: '약 11시간',
+    departure: '인천 출발',
+    arrival: 'LAX 공항 도착 06:50 AM (현지시간)',
+    duration: '약 12시간',
   },
   return: {
     airline: 'Asiana Airlines',
     flight: 'OZ201',
     date: '2026-02-13',
-    departure: 'LA 09:10',
-    arrival: '인천 익일 15:45',
+    departure: 'SFO 공항 출발',
+    arrival: '인천 공항 도착',
     duration: '약 13시간',
   },
 }
 
 // 호텔 정보
 export const HOTEL_INFO = {
-  name: 'Holiday Inn & Suites Hotel (또는 동급)',
-  quality: '4성급',
+  name: 'Best Western Plus Hotel (로스앤젤레스) / Bay Landing Hotel San Francisco (샌프란시스코) 또는 동급',
+  quality: '3-4성급',
   meals: '호텔 조식 매일 제공',
+  roomType: '2더블베드룸',
 }
 
