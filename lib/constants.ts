@@ -30,7 +30,7 @@ export const GAMES = [
     note: '빅매치!',
     logoA: '/images/warriors-logo.png',
     logoB: '/images/grizzlies-logo.png',
-    image: '/images/chase-center-new.jpg',
+    image: '/images/chase-center.jpg',
   },
   {
     id: 2,

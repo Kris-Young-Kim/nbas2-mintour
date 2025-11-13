@@ -19,8 +19,8 @@ export function Hero() {
       <div className="absolute inset-0 z-0">
         {!imageError ? (
           <img
-            src="/images/arena-hero-new.jpg"
-            alt="NBA 경기장"
+            src="/images/KakaoTalk_20251112_155242330_01.jpg"
+            alt="NBA 직관투어 출발 - 인천공항"
             className="absolute inset-0 w-full h-full object-cover"
             onError={() => setImageError(true)}
           />
