@@ -1,7 +1,8 @@
 ﻿# NBA 직관투어 랜딩페이지 - 개발 TODO 리스트
 
 > **프로젝트**: 김맘바와 함께하는 NBA 직관투어 2026  
-> **기간**: 2026.02.08 ~ 2026.02.13 (5박 7일)  
+> **기간**: 2026.02.08 ~ 2026.02.13 (5박 6일)  
+> **가격**: ₩7,300,000 (계약금 ₩2,000,000, 잔금 ₩5,300,000)  
 > **기술 스택**: Next.js 14+, TypeScript, Tailwind CSS, pnpm  
 > **배포**: Vercel
 
@@ -71,25 +72,31 @@
   - [x] 가격 정보 (총액, 계약금, 잔금)
   - [x] 설명 및 서브타이틀
 - [x] 경기 정보 (`GAMES`)
-  - [x] 3경기 데이터 (Warriors vs Grizzlies, Lakers vs Spurs, Lakers vs Mavericks)
+  - [x] 3경기 데이터 (Lakers vs Thunder, Lakers vs Spurs, Warriors vs Spurs)
   - [x] 팀 정보, 경기장, 날짜
   - [x] 로고 및 이미지 경로
 - [x] FAQ 데이터 (`FAQ_DATA`)
   - [x] 5개 질문 및 답변
 - [x] 포함사항 (`INCLUDED_ITEMS`)
+  - [x] 전일정 호텔, 차량 및 가이드, 전일정 식사, 기사님 & 가이드 팁
 - [x] 불포함사항 (`EXCLUDED_ITEMS`)
+  - [x] NBA 입장권 등 각종 입장료, 옵션 관광
 - [x] 항공 정보 (`FLIGHT_INFO`)
+  - [x] 출발: LAX 공항 도착 06:50 AM (2/8)
+  - [x] 귀국: SFO 공항 출발 (2/13)
 - [x] 호텔 정보 (`HOTEL_INFO`)
+  - [x] LA: Best Western Plus Hotel (2더블베드룸)
+  - [x] 샌프란시스코: Bay Landing Hotel San Francisco (2더블베드룸)
 
 ### 2.2 `lib/data.ts` 생성
 
-- [x] 5일 일정 데이터 (`ITINERARY`)
-  - [x] Day 1: 인천 → 샌프란시스코
-  - [x] Day 2: 샌프란시스코 - Warriors vs Grizzlies
-  - [x] Day 3: 샌프란시스코 → LA - Lakers vs Spurs
-  - [x] Day 4: LA - 관광 (산타모니카, 베니스, 할리우드)
-  - [x] Day 5: LA - Lakers vs Mavericks
-  - [x] Day 6: LA → 인천 (귀국)
+- [x] 6일 일정 데이터 (`ITINERARY`)
+  - [x] Day 1: 로스앤젤레스 도착 & LA 투어 (산타모니카 비치, 게티비라, 베버리힐스, 할리우드)
+  - [x] Day 2: LA 관광 & Lakers vs Thunder
+  - [x] Day 3: 아울렛 쇼핑 & Lakers vs Spurs
+  - [x] Day 4: 샌프란시스코 이동 & Warriors vs Spurs
+  - [x] Day 5: 샌프란시스코 관광 (금문교, 피셔맨스워프, 페리빌딩, 베이크루즈 유람선)
+  - [x] Day 6: 인천 귀국
 - [x] 타입 정의 (`ItineraryDay`, `Game`)
 
 ---
@@ -111,7 +118,7 @@
 
 - [x] `components/Hero.tsx`
   - [x] 헤드라인: "김맘바와 함께하는 NBA 직관투어 2026"
-  - [x] 서브타이틀: "샌프란시스코, LA에서 만나는 NBA의 모든 것"
+  - [x] 서브타이틀: "로스앤젤레스, 샌프란시스코에서 만나는 NBA의 모든 것"
   - [x] NBA 경기장 배경 이미지 (Next.js Image)
   - [x] 주요 CTA: "투어 신청하기"
   - [x] 보조 CTA: "일정 보기"
@@ -134,7 +141,7 @@
 ### 3.4 Itinerary Section
 
 - [x] `components/Itinerary.tsx`
-  - [x] 5일 일정 표시
+  - [x] 6일 일정 표시
   - [x] 아코디언 기능 (확장/축약)
   - [x] 각 일차 카드
     - [x] 날짜 (Day 1 | 2/8)
@@ -162,9 +169,9 @@
 ### 3.6 Pricing Section
 
 - [x] `components/Pricing.tsx`
-  - [x] 총액: ₩6,800,000
+  - [x] 총액: ₩7,300,000
   - [x] 계약금: ₩2,000,000 (신청 시)
-  - [x] 잔금: ₩4,800,000 (출발 15일 전)
+  - [x] 잔금: ₩5,300,000 (출발 1~2주 전)
   - [x] 포함사항 목록
   - [x] 불포함사항 목록
   - [x] 명확한 시각적 구분
@@ -175,10 +182,10 @@
 
 - [x] `components/FAQ.tsx`
   - [x] 5개 FAQ 항목
-    - [x] 환율 변동 시 가격 조정?
+    - [x] 환율 변동 시 가격 조정? (730만원 동결)
     - [x] 현지 합류 가능?
     - [x] 추가 체류 가능?
-    - [x] 입금 일정?
+    - [x] 입금 일정? (계약금 200만원, 잔금 530만원)
     - [x] 현재 신청 현황?
   - [x] 아코디언 기능 (확장/축약)
   - [x] 부드러운 애니메이션
@@ -249,10 +256,9 @@
 - [x] Hero 배경 이미지 (`/public/images/hero-bg.jpg`)
 - [x] NBA 팀 로고
   - [x] Warriors 로고
-  - [x] Grizzlies 로고
+  - [x] Thunder 로고
   - [x] Lakers 로고
   - [x] Spurs 로고
-  - [x] Mavericks 로고
 - [x] 경기장 이미지
   - [x] Chase Center
   - [x] Crypto Arena
