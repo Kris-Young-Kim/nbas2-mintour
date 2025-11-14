@@ -1,6 +1,6 @@
-'use client'
+'use client';
 
-import { TOUR_INFO, INCLUDED_ITEMS, EXCLUDED_ITEMS } from '@/lib/constants'
+import { TOUR_INFO, INCLUDED_ITEMS, EXCLUDED_ITEMS } from '@/lib/constants';
 
 export function Pricing() {
   return (
@@ -16,7 +16,7 @@ export function Pricing() {
           <div className="bg-gradient-to-br from-blue-600 to-blue-800 rounded-lg p-8 mb-8 text-white text-center shadow-xl">
             <p className="text-lg mb-2">투어 가격</p>
             <p className="text-5xl font-bold mb-4">₩{TOUR_INFO.price.toLocaleString()}</p>
-            <p className="text-blue-100">5박 7일 전 일정 포함</p>
+            <p className="text-blue-100">6박 7일 전 일정 포함</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
             <div className="bg-gray-50 dark:bg-gray-900 p-6 rounded-lg">
@@ -24,33 +24,49 @@ export function Pricing() {
               <p className="text-3xl font-bold text-blue-600 dark:text-blue-400 mb-2">
                 ₩{TOUR_INFO.deposit.toLocaleString()}
               </p>
-              <p className="text-sm text-gray-600 dark:text-gray-400">
-                1월 중순까지 선입금
-              </p>
+              <p className="text-sm text-gray-600 dark:text-gray-400">12월 중순까지 선입금</p>
             </div>
             <div className="bg-gray-50 dark:bg-gray-900 p-6 rounded-lg">
               <h3 className="text-xl font-semibold mb-4 text-gray-900 dark:text-white">잔금</h3>
               <p className="text-3xl font-bold text-blue-600 dark:text-blue-400 mb-2">
                 ₩{TOUR_INFO.finalPayment.toLocaleString()}
               </p>
-              <p className="text-sm text-gray-600 dark:text-gray-400">
-                출발 1~2주 전 결제
-              </p>
+              <p className="text-sm text-gray-600 dark:text-gray-400">출발 15일일 전 결제</p>
             </div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div>
               <h3 className="text-2xl font-semibold mb-4 text-gray-900 dark:text-white flex items-center">
-                <svg className="w-6 h-6 mr-2 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                <svg
+                  className="w-6 h-6 mr-2 text-green-600"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M5 13l4 4L19 7"
+                  />
                 </svg>
                 포함 사항
               </h3>
               <ul className="space-y-2">
                 {INCLUDED_ITEMS.map((item, index) => (
                   <li key={index} className="flex items-start text-gray-700 dark:text-gray-300">
-                    <svg className="w-5 h-5 mr-2 mt-0.5 flex-shrink-0 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    <svg
+                      className="w-5 h-5 mr-2 mt-0.5 flex-shrink-0 text-green-600"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M5 13l4 4L19 7"
+                      />
                     </svg>
                     <span>{item}</span>
                   </li>
@@ -59,16 +75,36 @@ export function Pricing() {
             </div>
             <div>
               <h3 className="text-2xl font-semibold mb-4 text-gray-900 dark:text-white flex items-center">
-                <svg className="w-6 h-6 mr-2 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                <svg
+                  className="w-6 h-6 mr-2 text-red-600"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M6 18L18 6M6 6l12 12"
+                  />
                 </svg>
                 불포함 사항
               </h3>
               <ul className="space-y-2">
                 {EXCLUDED_ITEMS.map((item, index) => (
                   <li key={index} className="flex items-start text-gray-700 dark:text-gray-300">
-                    <svg className="w-5 h-5 mr-2 mt-0.5 flex-shrink-0 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                    <svg
+                      className="w-5 h-5 mr-2 mt-0.5 flex-shrink-0 text-red-600"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M6 18L18 6M6 6l12 12"
+                      />
                     </svg>
                     <span>{item}</span>
                   </li>
@@ -84,6 +120,5 @@ export function Pricing() {
         </div>
       </div>
     </section>
-  )
+  );
 }
-

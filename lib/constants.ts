@@ -7,11 +7,11 @@ export const TOUR_INFO = {
   endDate: '2026-02-13',
   dateDisplay: '2026.02.07 ~ 2026.02.13',
   price: 7300000,
-  deposit: 2000000,
-  finalPayment: 5300000,
+  deposit: 1000000,
+  finalPayment: 6300000,
   description: '로스앤젤레스, 샌프란시스코에서 만나는 NBA의 모든 것',
   subtitle: 'NBA 유튜버 김맘바와 함께하는 농구 성지 순례',
-}
+};
 
 // 경기 정보
 export const GAMES = [
@@ -83,15 +83,14 @@ export const GAMES = [
     logoB: '/images/grizzlies-logo.png',
     image: '/images/chase-center-game.jpg',
   },
-]
+];
 
 // FAQ 데이터
 export const FAQ_DATA = [
   {
     id: 1,
     question: '환율 변동이 있는데, 가격이 올라가지는 않나요?',
-    answer:
-      '환율 영향이 있어도 전체 비용에선 1~20만원 정도의 차이이므로 730만원 동결입니다.',
+    answer: '환율 영향이 있어도 전체 비용에선 1~20만원 정도의 차이이므로 730만원 동결입니다.',
   },
   {
     id: 2,
@@ -102,21 +101,20 @@ export const FAQ_DATA = [
   {
     id: 3,
     question: '귀국 후 추가 체류가 가능한가요?',
-    answer:
-      '항공료 추가 또는 항공권 개별 구매 후 귀국일자를 조정할 수 있습니다.',
+    answer: '항공료 추가 또는 항공권 개별 구매 후 귀국일자를 조정할 수 있습니다.',
   },
   {
     id: 4,
     question: '입금 일정은 어떻게 되나요?',
     answer:
-      '항공권 부킹 마감이 1월 초이므로 1월 중순까지 계약금 200만원을 선입금하고, 투어 확정 후 출발 1~2주 전에 나머지 530만원을 결제합니다.',
+      '항공권 부킹 마감이 1월 초이므로 12월 중순까지 계약금 100만원을 선입금하고, 투어 확정 후 출발 15일 전에 나머지 630만원을 결제합니다.',
   },
   {
     id: 5,
     question: '현재 신청자는 몇 명인가요?',
     answer: '20명부터 출발이며, 현재 약 10명이 신청했습니다.',
   },
-]
+];
 
 // 포함사항
 export const INCLUDED_ITEMS = [
@@ -124,13 +122,10 @@ export const INCLUDED_ITEMS = [
   '차량 및 가이드',
   '전일정 식사',
   '기사님 & 가이드 팁',
-]
+];
 
 // 불포함사항
-export const EXCLUDED_ITEMS = [
-  'NBA 입장권 등 각종 입장료',
-  '옵션 관광',
-]
+export const EXCLUDED_ITEMS = ['NBA 입장권 등 각종 입장료'];
 
 // 항공 정보
 export const FLIGHT_INFO = {
@@ -150,7 +145,7 @@ export const FLIGHT_INFO = {
     arrival: '인천 공항 도착',
     duration: '약 13시간',
   },
-}
+};
 
 // 호텔 정보
 export const HOTEL_INFO = {
@@ -158,5 +153,4 @@ export const HOTEL_INFO = {
   quality: '3-4성급',
   meals: '호텔 조식 매일 제공',
   roomType: '2더블베드룸',
-}
-
+};
