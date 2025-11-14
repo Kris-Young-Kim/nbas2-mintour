@@ -21,7 +21,7 @@ export const ITINERARY = [
       '경기 관람 후 호텔 도착 휴식 (21:00)',
     ],
     mealInfo: '기내식, 중식, 석식',
-    image: '/images/crypto-arena.jpg',
+    image: '/images/istockphoto-1692389542-612x612.jpg',
     gameInfo: {
       teams: 'Lakers vs Warriors',
       venue: 'Crypto Arena',
@@ -44,7 +44,7 @@ export const ITINERARY = [
       '석식 후 휴식 (19:00)',
     ],
     mealInfo: '호텔 조식, 자체 준비 (중식), 석식',
-    image: '/images/los-angeles.jpg',
+    image: '/images/los-angeles-tour.jpg',
     type: 'sightseeing',
   },
   {
@@ -65,7 +65,7 @@ export const ITINERARY = [
       '경기 관람 후 호텔 도착 휴식 (22:00)',
     ],
     mealInfo: '호텔 조식, 자체 준비 (중식, 석식)',
-    image: '/images/crypto-arena.jpg',
+    image: '/images/crypto-arena-game.jpg',
     gameInfo: {
       teams: 'Lakers vs Thunder',
       venue: 'Crypto Arena',
@@ -116,7 +116,7 @@ export const ITINERARY = [
       '경기 관람 후 호텔 도착 휴식 (22:00)',
     ],
     mealInfo: '호텔 조식, 자체 준비 (중식, 석식)',
-    image: '/images/chase-center.jpg',
+    image: '/images/chase-center-game.jpg',
     gameInfo: {
       teams: 'Warriors vs Grizzlies',
       venue: 'Chase Center',
@@ -141,7 +141,7 @@ export const ITINERARY = [
       '석식 후 호텔 이동 휴식 (19:00)',
     ],
     mealInfo: '호텔 조식, 자체 준비 (중식), 석식',
-    image: '/images/san-francisco.jpg',
+    image: '/images/san-francisco-tour.jpg',
     type: 'sightseeing',
   },
   {

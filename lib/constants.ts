@@ -30,7 +30,7 @@ export const GAMES = [
     note: '빅매치!',
     logoA: '/images/lakers-logo.png',
     logoB: '/images/warriors-logo.png',
-    image: '/images/crypto-arena.jpg',
+    image: '/images/crypto-arena-game.jpg',
   },
   {
     id: 2,
@@ -47,7 +47,7 @@ export const GAMES = [
     note: '빅매치!',
     logoA: '/images/lakers-logo.png',
     logoB: '/images/thunder-logo.png',
-    image: '/images/crypto-arena.jpg',
+    image: '/images/crypto-arena-game.jpg',
   },
   {
     id: 3,
@@ -81,7 +81,7 @@ export const GAMES = [
     note: '빅매치!',
     logoA: '/images/warriors-logo.png',
     logoB: '/images/grizzlies-logo.png',
-    image: '/images/chase-center.jpg',
+    image: '/images/chase-center-game.jpg',
   },
 ]
 
