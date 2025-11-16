@@ -6,7 +6,6 @@ import { Highlights } from '@/components/Highlights'
 import { Pricing } from '@/components/Pricing'
 import { FAQ } from '@/components/FAQ'
 import { CTA } from '@/components/CTA'
-import { Newsletter } from '@/components/Newsletter'
 import { Footer } from '@/components/Footer'
 
 export default function Home() {
@@ -20,7 +19,6 @@ export default function Home() {
       <Pricing />
       <FAQ />
       <CTA />
-      <Newsletter />
       <Footer />
     </main>
   )

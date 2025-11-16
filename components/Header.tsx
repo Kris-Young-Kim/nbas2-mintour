@@ -79,7 +79,7 @@ export function Header() {
               </button>
             )}
             <button
-              onClick={() => scrollToSection('pricing')}
+              onClick={() => window.open('https://form.naver.com/response/BhPR2bzXaqj-sF66MgL_1w', '_blank')}
               className="hidden md:block px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 transition-colors font-medium"
             >
               신청하기
@@ -132,7 +132,7 @@ export function Header() {
                 FAQ
               </button>
               <button
-                onClick={() => scrollToSection('pricing')}
+                onClick={() => window.open('https://form.naver.com/response/BhPR2bzXaqj-sF66MgL_1w', '_blank')}
                 className="mt-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 transition-colors font-medium text-center"
               >
                 투어 신청하기
