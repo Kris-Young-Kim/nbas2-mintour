@@ -65,7 +65,7 @@ const HIGHLIGHTS = [
   },
   {
     id: 4,
-    title: '₩1억 여행자보험 + 호텔',
+    title: '1억원 여행자보험 + 호텔',
     description: (
       <>
         안전한 여행을 위한 보험과
