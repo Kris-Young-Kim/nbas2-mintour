@@ -1,9 +1,11 @@
 import { MetadataRoute } from 'next'
 
 export default function sitemap(): MetadataRoute.Sitemap {
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://nbas2-mintour-atp2ntgjz-kris071s-projects.vercel.app'
+  
   return [
     {
-      url: 'https://nba-tour-landing.vercel.app',
+      url: baseUrl,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 1,

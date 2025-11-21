@@ -1,4 +1,5 @@
 {
+  "name": "nbas2-mintour",
   "buildCommand": "pnpm build",
   "installCommand": "pnpm install",
   "framework": "nextjs"

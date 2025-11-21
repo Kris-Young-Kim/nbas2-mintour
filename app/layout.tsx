@@ -11,6 +11,7 @@ export const metadata: Metadata = {
     description: '샌프란시스코, LA에서 만나는 NBA의 모든 것',
     type: 'website',
     locale: 'ko_KR',
+    url: process.env.NEXT_PUBLIC_SITE_URL || 'https://nbas2-mintour-atp2ntgjz-kris071s-projects.vercel.app',
   },
   twitter: {
     card: 'summary_large_image',
