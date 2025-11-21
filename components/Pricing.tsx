@@ -1,22 +1,36 @@
 'use client';
 
 import { TOUR_INFO, INCLUDED_ITEMS, EXCLUDED_ITEMS } from '@/lib/constants';
+import { NBAButton } from './NBAButton';
 
 export function Pricing() {
   return (
-    <section id="pricing" className="py-20 bg-white dark:bg-gray-800">
-      <div className="container mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 text-gray-900 dark:text-white">
-          가격 정보
-        </h2>
-        <p className="text-center text-gray-600 dark:text-gray-400 mb-12 text-lg">
-          투어 비용 및 결제 안내
-        </p>
+    <section id="pricing" className="py-20 bg-gradient-to-b from-white to-gray-50 dark:from-gray-800 dark:to-gray-900 relative overflow-hidden">
+      {/* 배경 장식 */}
+      <div className="absolute inset-0 opacity-5 court-pattern" />
+      
+      <div className="container mx-auto px-4 relative z-10">
+        <div className="text-center mb-12 animate-fade-in-up">
+          <span className="text-5xl animate-bounce-basketball inline-block mb-4">💰</span>
+          <h2 className="text-3xl md:text-4xl font-black text-gray-900 dark:text-white mb-4">
+            가격 정보
+          </h2>
+          <p className="text-center text-gray-600 dark:text-gray-400 text-lg">
+            투어 비용 및 결제 안내
+          </p>
+        </div>
         <div className="max-w-4xl mx-auto">
-          <div className="bg-gradient-to-br from-blue-600 to-blue-800 rounded-lg p-8 mb-8 text-white text-center shadow-xl">
-            <p className="text-lg mb-2">투어 가격</p>
-            <p className="text-5xl font-bold mb-4">₩{TOUR_INFO.price.toLocaleString()}</p>
-            <p className="text-blue-100">4박 5일 전 일정 포함</p>
+          <div className="bg-gradient-to-br from-basketball-orange via-nba-red to-basketball-orange rounded-2xl p-8 mb-8 text-white text-center shadow-2xl border-4 border-nba-blue animate-fade-in-up animate-pulse-glow relative overflow-hidden">
+            {/* 배경 패턴 */}
+            <div className="absolute inset-0 opacity-10 court-pattern" />
+            <div className="relative z-10">
+              <div className="mb-4">
+                <span className="text-4xl animate-bounce-basketball inline-block">🏀</span>
+              </div>
+              <p className="text-xl md:text-2xl mb-2 font-bold">투어 가격</p>
+              <p className="text-5xl md:text-6xl font-black mb-4 drop-shadow-lg">₩{TOUR_INFO.price.toLocaleString()}</p>
+              <p className="text-lg text-white/90 font-semibold">{TOUR_INFO.duration} 전 일정 포함</p>
+            </div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
             <div className="bg-gray-50 dark:bg-gray-900 p-6 rounded-lg">
@@ -112,13 +126,15 @@ export function Pricing() {
               </ul>
             </div>
           </div>
-          <div className="mt-8 text-center">
-            <button 
+          <div className="mt-8 text-center animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
+            <NBAButton
               onClick={() => window.open('https://form.naver.com/response/BhPR2bzXaqj-sF66MgL_1w', '_blank')}
-              className="px-8 py-4 bg-blue-600 text-white text-lg font-semibold rounded-lg hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 transition-colors shadow-lg"
+              size="lg"
+              variant="primary"
             >
+              <span>🏀</span>
               투어 신청하기
-            </button>
+            </NBAButton>
           </div>
         </div>
       </div>

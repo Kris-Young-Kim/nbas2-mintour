@@ -7,11 +7,13 @@ import { Pricing } from '@/components/Pricing'
 import { FAQ } from '@/components/FAQ'
 import { CTA } from '@/components/CTA'
 import { Footer } from '@/components/Footer'
+import { SideNav } from '@/components/SideNav'
 
 export default function Home() {
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen relative">
       <Header />
+      <SideNav />
       <Hero />
       <NBASpotlight />
       <Itinerary />

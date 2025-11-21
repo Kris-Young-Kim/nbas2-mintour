@@ -3,68 +3,81 @@
 import { useTheme } from 'next-themes'
 import { useEffect, useState } from 'react'
 import { TOUR_INFO } from '@/lib/constants'
+import { NBAButton } from './NBAButton'
 
 export function Header() {
   const { theme, setTheme } = useTheme()
   const [mounted, setMounted] = useState(false)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [scrolled, setScrolled] = useState(false)
 
   useEffect(() => {
     setMounted(true)
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20)
+    }
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id)
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' })
-      setMobileMenuOpen(false) // 모바일 메뉴 닫기
+      setMobileMenuOpen(false)
     }
   }
 
+  const navItems = [
+    { id: 'games', label: '경기 일정', icon: '🏀' },
+    { id: 'itinerary', label: '투어 일정', icon: '📅' },
+    { id: 'pricing', label: '가격 정보', icon: '💰' },
+    { id: 'faq', label: 'FAQ', icon: '❓' },
+  ]
+
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-white/80 backdrop-blur-sm dark:bg-gray-900/80">
+    <header
+      className={`sticky top-0 z-50 w-full transition-all duration-300 ${
+        scrolled
+          ? 'bg-gradient-to-r from-nba-blue via-nba-purple to-nba-blue shadow-2xl border-b-4 border-basketball-orange'
+          : 'bg-gradient-to-r from-nba-blue/95 via-nba-purple/95 to-nba-blue/95 backdrop-blur-md border-b-2 border-basketball-orange/50'
+      }`}
+    >
       <nav className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
-          <div className="flex items-center space-x-8">
-            <button
-              onClick={() => scrollToSection('hero')}
-              className="text-xl font-bold text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
-              aria-label="홈으로 이동"
-            >
+          {/* 로고 */}
+          <button
+            onClick={() => scrollToSection('hero')}
+            className="flex items-center gap-2 group"
+            aria-label="홈으로 이동"
+          >
+            <span className="text-3xl animate-bounce-basketball">🏀</span>
+            <span className="text-xl md:text-2xl font-black text-white drop-shadow-lg group-hover:scale-110 transition-transform">
               {TOUR_INFO.shortTitle}
-            </button>
-            <div className="hidden md:flex items-center space-x-6">
+            </span>
+          </button>
+
+          {/* 데스크톱 네비게이션 */}
+          <div className="hidden lg:flex items-center space-x-2">
+            {navItems.map((item) => (
               <button
-                onClick={() => scrollToSection('games')}
-                className="text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                key={item.id}
+                onClick={() => scrollToSection(item.id)}
+                className="px-4 py-2 rounded-lg text-white font-semibold hover:bg-white/20 transition-all hover:scale-110 flex items-center gap-2 group relative overflow-hidden"
               >
-                경기 일정
+                <span className="group-hover:animate-bounce-basketball">{item.icon}</span>
+                <span>{item.label}</span>
+                <span className="absolute bottom-0 left-0 w-0 h-1 bg-basketball-orange group-hover:w-full transition-all duration-300" />
               </button>
-              <button
-                onClick={() => scrollToSection('itinerary')}
-                className="text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
-              >
-                투어 일정
-              </button>
-              <button
-                onClick={() => scrollToSection('pricing')}
-                className="text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
-              >
-                가격 정보
-              </button>
-              <button
-                onClick={() => scrollToSection('faq')}
-                className="text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
-              >
-                FAQ
-              </button>
-            </div>
+            ))}
           </div>
-          <div className="flex items-center space-x-4">
+
+          {/* 우측 액션 버튼 */}
+          <div className="flex items-center space-x-3">
             {mounted && (
               <button
                 onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-                className="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
+                className="p-2 rounded-lg bg-white/20 hover:bg-white/30 text-white transition-all hover:rotate-180 hover:scale-110"
                 aria-label="테마 전환"
               >
                 {theme === 'dark' ? (
@@ -78,16 +91,18 @@ export function Header() {
                 )}
               </button>
             )}
-            <button
-              onClick={() => window.open('https://form.naver.com/response/BhPR2bzXaqj-sF66MgL_1w', '_blank')}
-              className="hidden md:block px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 transition-colors font-medium"
-            >
-              신청하기
-            </button>
+            <div className="hidden md:block">
+              <NBAButton
+                onClick={() => window.open('https://form.naver.com/response/BhPR2bzXaqj-sF66MgL_1w', '_blank')}
+                size="md"
+              >
+                신청하기
+              </NBAButton>
+            </div>
             {/* 모바일 메뉴 버튼 */}
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="md:hidden p-2 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
+              className="lg:hidden p-2 rounded-lg bg-white/20 hover:bg-white/30 text-white transition-all"
               aria-label="메뉴 열기/닫기"
               aria-expanded={mobileMenuOpen}
             >
@@ -103,40 +118,30 @@ export function Header() {
             </button>
           </div>
         </div>
+
         {/* 모바일 메뉴 */}
         {mobileMenuOpen && (
-          <div className="md:hidden mt-4 pb-4 border-t border-gray-200 dark:border-gray-700">
+          <div className="lg:hidden mt-4 pb-4 border-t border-white/20 animate-slide-down">
             <div className="flex flex-col space-y-2 pt-4">
-              <button
-                onClick={() => scrollToSection('games')}
-                className="text-left px-4 py-2 text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-lg transition-colors"
-              >
-                경기 일정
-              </button>
-              <button
-                onClick={() => scrollToSection('itinerary')}
-                className="text-left px-4 py-2 text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-lg transition-colors"
-              >
-                투어 일정
-              </button>
-              <button
-                onClick={() => scrollToSection('pricing')}
-                className="text-left px-4 py-2 text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-lg transition-colors"
-              >
-                가격 정보
-              </button>
-              <button
-                onClick={() => scrollToSection('faq')}
-                className="text-left px-4 py-2 text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-lg transition-colors"
-              >
-                FAQ
-              </button>
-              <button
-                onClick={() => window.open('https://form.naver.com/response/BhPR2bzXaqj-sF66MgL_1w', '_blank')}
-                className="mt-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 transition-colors font-medium text-center"
-              >
-                투어 신청하기
-              </button>
+              {navItems.map((item) => (
+                <button
+                  key={item.id}
+                  onClick={() => scrollToSection(item.id)}
+                  className="text-left px-4 py-3 text-white font-semibold hover:bg-white/20 rounded-lg transition-all flex items-center gap-2 group"
+                >
+                  <span className="group-hover:animate-bounce-basketball">{item.icon}</span>
+                  <span>{item.label}</span>
+                </button>
+              ))}
+              <div className="pt-2">
+                <NBAButton
+                  onClick={() => window.open('https://form.naver.com/response/BhPR2bzXaqj-sF66MgL_1w', '_blank')}
+                  size="md"
+                  className="w-full"
+                >
+                  투어 신청하기
+                </NBAButton>
+              </div>
             </div>
           </div>
         )}
