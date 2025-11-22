@@ -1,4 +1,4 @@
-// 5일 일정 데이터
+// 6일 일정 데이터
 export const ITINERARY = [
   {
     day: 1,
@@ -101,7 +101,7 @@ export const ITINERARY = [
     day: 5,
     date: '2026-02-23',
     dateDisplay: '2월 23일(월)',
-    title: '인천 귀국',
+    title: '인천 출발',
     titleEn: 'Incheon Depart',
     location: 'San Francisco',
     locationKo: '샌프란시스코',
@@ -111,6 +111,22 @@ export const ITINERARY = [
       '인천 공항 출발',
     ],
     mealInfo: '호텔식',
+    image: '/images/istockphoto-1692389542-612x612.jpg',
+    type: 'travel',
+  },
+  {
+    day: 6,
+    date: '2026-02-24',
+    dateDisplay: '2월 24일(화)',
+    title: '인천 도착',
+    titleEn: 'Incheon Arrival',
+    location: 'Incheon',
+    locationKo: '인천',
+    activities: [
+      '인천 공항 도착',
+      '자율 해산',
+    ],
+    mealInfo: '기내식',
     image: '/images/istockphoto-1692389542-612x612.jpg',
     type: 'travel',
   },

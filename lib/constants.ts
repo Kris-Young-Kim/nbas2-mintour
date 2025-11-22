@@ -2,10 +2,10 @@
 export const TOUR_INFO = {
   title: '김맘바와 함께하는 NBA 직관투어 2026',
   shortTitle: 'NBA 직관투어 2026',
-  duration: '4박 5일',
+  duration: '4박 6일',
   startDate: '2026-02-19',
-  endDate: '2026-02-23',
-  dateDisplay: '2026.02.19 ~ 2026.02.23',
+  endDate: '2026-02-24',
+  dateDisplay: '2026.02.19 ~ 2026.02.24',
   price: 6500000,
   deposit: 1000000,
   finalPayment: 5500000,
@@ -121,7 +121,7 @@ export const FLIGHT_INFO = {
     flight: 'OZ201',
     date: '2026-02-23',
     departure: 'SFO 공항 출발',
-    arrival: '인천 공항 도착',
+    arrival: '인천 공항 도착 (2월 24일)',
     duration: '약 13시간',
   },
 };
