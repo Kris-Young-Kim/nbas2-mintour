@@ -88,8 +88,8 @@ export function Hero() {
           </NBAButton>
         </div>
         <div className="mt-12 text-white/90 animate-fade-in-up" style={{ animationDelay: '1s' }}>
-          <div className="inline-block bg-gradient-to-r from-basketball-orange/20 to-nba-red/20 backdrop-blur-sm rounded-2xl p-6 border-2 border-basketball-orange/30">
-            <p className="text-lg md:text-xl mb-2 font-semibold">
+          <div className="inline-block bg-gray-900/80 backdrop-blur-sm rounded-2xl p-6 border-2 border-basketball-orange/30">
+            <p className="text-lg md:text-xl mb-2 font-semibold text-gray-100">
               <span className="text-basketball-orange">📅</span> 투어 기간: {TOUR_INFO.dateDisplay} ({TOUR_INFO.duration})
             </p>
             <p className="text-2xl md:text-3xl font-black text-basketball-orange">

@@ -49,8 +49,8 @@ export function CTA() {
             일정 자세히 보기
           </NBAButton>
         </div>
-        <div className="mt-8 inline-block bg-white/10 backdrop-blur-md rounded-2xl p-6 border-2 border-basketball-orange/50 animate-fade-in-up" style={{ animationDelay: '0.8s' }}>
-          <p className="text-lg font-semibold mb-2 text-white">
+        <div className="mt-8 inline-block bg-gray-900/80 backdrop-blur-md rounded-2xl p-6 border-2 border-basketball-orange/50 animate-fade-in-up" style={{ animationDelay: '0.8s' }}>
+          <p className="text-lg font-semibold mb-2 text-gray-100">
             <span className="text-basketball-orange">📅</span> {TOUR_INFO.dateDisplay}
           </p>
           <p className="text-3xl md:text-4xl font-black text-basketball-orange">
