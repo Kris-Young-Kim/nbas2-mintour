@@ -70,7 +70,7 @@ export function Hero() {
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in-up" style={{ animationDelay: '0.8s' }}>
           <NBAButton
-            onClick={() => window.open('https://form.naver.com/response/BhPR2bzXaqj-sF66MgL_1w', '_blank')}
+            onClick={() => window.open('https://form.naver.com/response/F86hdXHkmqFym7xNkOGMZw', '_blank')}
             size="lg"
             variant="primary"
           >

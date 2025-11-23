@@ -128,7 +128,7 @@ export function Pricing() {
           </div>
           <div className="mt-8 text-center animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
             <NBAButton
-              onClick={() => window.open('https://form.naver.com/response/BhPR2bzXaqj-sF66MgL_1w', '_blank')}
+              onClick={() => window.open('https://form.naver.com/response/F86hdXHkmqFym7xNkOGMZw', '_blank')}
               size="lg"
               variant="primary"
             >

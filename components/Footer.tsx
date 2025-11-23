@@ -70,7 +70,7 @@ export function Footer() {
               <span>📞</span> 연락처
             </h3>
             <div className="space-y-2 text-gray-300 text-sm">
-              <p className="font-bold text-white text-lg mb-3">민투어(국내외여행업)</p>
+              <p className="font-bold text-lg mb-3" style={{ color: '#001f3f' }}>민투어(국내외여행업)</p>
               <div className="space-y-1">
                 <p className="flex items-center gap-2">
                   <span>📋</span> 등록번호: 146-02-02477
@@ -90,7 +90,7 @@ export function Footer() {
               </div>
               <div className="pt-4">
                 <NBAButton
-                  onClick={() => window.open('https://form.naver.com/response/BhPR2bzXaqj-sF66MgL_1w', '_blank')}
+                  onClick={() => window.open('https://form.naver.com/response/F86hdXHkmqFym7xNkOGMZw', '_blank')}
                   size="sm"
                   variant="secondary"
                   className="w-full"

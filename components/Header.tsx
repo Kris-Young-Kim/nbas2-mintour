@@ -93,7 +93,7 @@ export function Header() {
             )}
             <div className="hidden md:block">
               <NBAButton
-                onClick={() => window.open('https://form.naver.com/response/BhPR2bzXaqj-sF66MgL_1w', '_blank')}
+                onClick={() => window.open('https://form.naver.com/response/F86hdXHkmqFym7xNkOGMZw', '_blank')}
                 size="md"
               >
                 신청하기
@@ -135,7 +135,7 @@ export function Header() {
               ))}
               <div className="pt-2">
                 <NBAButton
-                  onClick={() => window.open('https://form.naver.com/response/BhPR2bzXaqj-sF66MgL_1w', '_blank')}
+                  onClick={() => window.open('https://form.naver.com/response/F86hdXHkmqFym7xNkOGMZw', '_blank')}
                   size="md"
                   className="w-full"
                 >
